@@ -32,7 +32,7 @@ int main() {
     cin >> n;
 
     vector<int> elements(n);
-    cout << "Enter stack elements (from top to bottom):" << endl;
+    cout << "Enter stack elements:" << endl;
     for (int i = 0; i < n; ++i) {
         cin >> elements[i];
     }
@@ -43,7 +43,7 @@ int main() {
 
     reverseStack(stk);
 
-    cout << "Stack after reversal: ";
+    cout << "Result: ";
     while (!stk.empty()) {
         cout << stk.top() << " ";
         stk.pop();
