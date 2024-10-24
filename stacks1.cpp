@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stack>
+#include <vector>
 
 using namespace std;
 
@@ -30,11 +31,14 @@ int main() {
     cout << "Enter number of elements: ";
     cin >> n;
 
-    cout << "Enter stack elements:" << endl;
+    vector<int> elements(n);
+    cout << "Enter stack elements (from top to bottom):" << endl;
     for (int i = 0; i < n; ++i) {
-        int element;
-        cin >> element;
-        stk.push(element);
+        cin >> elements[i];
+    }
+
+    for (int i = n - 1; i >= 0; --i) {
+        stk.push(elements[i]);
     }
 
     reverseStack(stk);
