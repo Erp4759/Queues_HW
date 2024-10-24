@@ -27,11 +27,11 @@ int main() {
     stack<int> stk;
     int n;
 
-    cout << "Enter number of elements";
+    cout << "Enter number of elements: ";
     cin >> n;
 
     cout << "Enter stack elements:" << endl;
-    for (int i = 0; i < n; ++n) {
+    for (int i = 0; i < n; ++i) {
         int element;
         cin >> element;
         stk.push(element);
@@ -39,7 +39,7 @@ int main() {
 
     reverseStack(stk);
 
-    cout << "Stack after: ";
+    cout << "Stack after reversal: ";
     while (!stk.empty()) {
         cout << stk.top() << " ";
         stk.pop();
